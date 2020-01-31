@@ -2,6 +2,7 @@ import React from 'react';
 import {createAppContainer, createSwitchNavigator} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
+import SplashScreen from "./src/screens/SplashScreen";
 import SignupScreen from "./src/screens/SignupScreen";
 import SigninScreen from "./src/screens/SigninScreen";
 import TrackListScreen from "./src/screens/TrackListScreen";
@@ -12,6 +13,7 @@ import {Provider as AuthProvider} from './src/context/AuthContext'
 import {setNavigator} from "./src/navigationRef";
 
 const switchNavigator = createSwitchNavigator({
+    Splash: SplashScreen,
     loginFlow:
         createStackNavigator({
             Signup: SignupScreen,
